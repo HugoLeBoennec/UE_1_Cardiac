@@ -8,6 +8,7 @@
 		<Build>
 			<Target title="Debug">
 				<Option output="debug/traitement" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="debug/" />
 				<Option object_output="debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -17,10 +18,12 @@
 			</Target>
 			<Target title="Release">
 				<Option output="release/traitement" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="release/" />
 				<Option object_output="release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-fshort-enums" />
 					<Add option="-O2" />
 				</Compiler>
 				<Linker>
