@@ -29,6 +29,7 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-fshort-enums" />
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="generationCode.c">
