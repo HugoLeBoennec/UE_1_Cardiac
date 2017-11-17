@@ -1,0 +1,73 @@
+INITIALISATION
+	listData		de type Data
+	type			de type ActionType
+	
+	time			de type Entier
+	timeMin			de type Entier
+	timeMax			de type Entier
+
+DEBUT
+	Appel de la fonction "readData" 									(lit le fichier)
+	"listData" prend la valeur retournée par le dernier appel 			(pointeur vers le premier élément de la liste chaînée)
+	
+	FAIRE :
+		Appel de la fonction "get_type" 								(demande une action)
+		
+		SI "type" est égal à 1 :
+			Appel de la fonction "action_display"						(affiche les données de la liste dans l'ordre)
+			
+		SINON SI "type" est égal à 2 :
+			Appel de la fonction "action_displaysorted"					(affiche les données de la liste triée par fréquence cardiaque)
+		
+		SINON SI "type" est égal à 3 :
+			Appel de la fonction "action_displaysize"					(affiche le nombre de données dans la liste)
+		
+		SINON SI "type" est égal à 4 :
+			Appel de la fonction "get_time"								(demande un temps)
+			"time" prend la valeur retournée par le dernier appel
+			
+			Appel de la fonction "action_search"						(affiche la valeur de fréquence cardiaque associée à "time")
+		
+		SINON SI "type" est égal à 5 :
+			Appel de la fonction "get_timemin"							(demande un temps pour la borne minimum)
+			"timemin" prend la valeur retournée par le dernier appel
+			
+			Appel de la fonction "get_timemax"							(demande un temps pour la borne maximum)
+			"timemax" prend la valeur retournée par le dernier appel
+			
+			Appel de la fonction "action_average"						(affiche la valeur moyenne arithmétique de fréquence cardiaque entre "timemin" et "timemax")
+		
+		SINON SI "type" est égal à 6 :
+			Appel de la fonction "get_timemin"							(demande un temps pour la borne minimum)
+			"timemin" prend la valeur retournée par le dernier appel
+			
+			Appel de la fonction "get_timemax"							(demande un temps pour la borne maximum)
+			"timemax" prend la valeur retournée par le dernier appel
+			
+			Appel de la fonction "action_geomaverage"					(affiche la valeur moyenne géométrique de fréquence cardiaque entre "timemin" et "timemax")
+		
+		SINON SI "type" est égal à 7 :
+			Appel de la fonction "get_timemin"							(demande un temps pour la borne minimum)
+			"timemin" prend la valeur retournée par le dernier appel
+			
+			Appel de la fonction "get_timemax"							(demande un temps pour la borne maximum)
+			"timemax" prend la valeur retournée par le dernier appel
+			
+			Appel de la fonction "action_minimum"						(affiche la valeur de fréquence cardiaque minimum entre "timemin" et "timemax")
+		
+		SINON SI "type" est égal à 8 :
+			Appel de la fonction "get_timemin"							(demande un temps pour la borne minimum)
+			"timemin" prend la valeur retournée par le dernier appel
+			
+			Appel de la fonction "get_timemax"							(demande un temps pour la borne maximum)
+			"timemax" prend la valeur retournée par le dernier appel
+			
+			Appel de la fonction "action_maximum"						(affiche la valeur de fréquence cardiaque maximum entre "timemin" et "timemax")
+	
+		FIN SI
+		
+	TANT QUE "type" est différent de 0
+	
+	Appel de la fonction "list_free"									(On vide la liste)
+	
+FIN
