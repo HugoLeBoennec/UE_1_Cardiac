@@ -85,13 +85,13 @@ void list_add(Data* list, unsigned long time, double pouls)
 // Permet de libérer la mémoire :
 void list_free(Data* list)
 {
-    Data* iterator = list;      // Un pointeur pour itérer au travers de la liste
+    Data* iterator = list;          // Un pointeur pour itérer au travers de la liste
 
     while (iterator->next != NULL)
     {
-        Data* tmp = iterator;   // On garde temporairement une réference sur l'élement afin de le libérer
+        Data* tmp = iterator;       // On garde temporairement une réference sur l'élement afin de le libérer
 
-        iterator = list->next;  // On itère vers la position suivante
+        iterator = iterator->next;  // On itère vers la position suivante
 
         free(tmp);
     }

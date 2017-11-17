@@ -78,5 +78,7 @@ int main(void)
         }
     } while (type != ACT_QUIT);
 
+    list_free(listData);
+
     return 0;
 }
