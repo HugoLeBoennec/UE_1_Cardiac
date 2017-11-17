@@ -1,0 +1,17 @@
+INITIALISATION
+	type			de type FlickerType
+	param			de type Entier
+
+DEBUT
+	Appel de la fonction "get_flickertype" 								(demande le type d'animation désiré)
+	"type" prend la valeur retournée par le dernier appel
+	
+	SI "type" est égal au type "TYPE_1LED"
+		Appel de la fonction "get_lednumber" 							(demande le numéro de led)
+		"param" prend la valeur retournée par le dernier appel
+		
+	FIN SI
+			
+	Appel de la fonction "write_paramfiles"								(écrit le fichier "param.h" en fonction des réponses aux menus)
+	
+FIN
